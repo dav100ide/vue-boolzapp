@@ -1,0 +1,25 @@
+/* =====================
+      profilo user
+====================== */
+.user {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--top-bar-color);
+}
+
+.user-info {
+   display: flex;
+   align-items: center;
+}
+
+.user-avatar {
+   width: 3.5rem;
+}
+
+/* =====================
+     hero notifiche
+====================== */
+.hero {
+   background-color: var(--accent-color);
+}

@@ -5,12 +5,16 @@
    /*bg-colors*/
    --primary-bg-color: #009688;
    --secondary-bg-color: #d9dbd4;
-
+   /* app colors */
+   --top-bar-color: #eaeaea;
    --app-primary-color: #e5ddd5;
    --accent-color: #8edafc;
-   --chat-color: #fff;
+   --received-color: #fff;
+   --sent-color: #d5f9ba;
    --chat-color-dark: #e9ebeb;
-   --icon-color: #b1b1b1;
+   /* icons colors */
+   --icon-color-light: #b1b1b1;
+   --icon-color-dark: #6b7376;
 }
 
 /* =====================
@@ -19,6 +23,7 @@
 body {
    font-family: 'Lato', sans-serif;
 }
+
 /* =====================
       macro-areas
 ====================== */
@@ -36,12 +41,36 @@ body {
 }
 
 aside {
-   width: 30%;
+   width: 35%;
 }
 
 main {
    flex-grow: 1;
 }
+
+/* =====================
+      icons
+====================== */
+i {
+   cursor: pointer;
+}
+
+.icons {
+   font-size: 1.2rem;
+}
+
+.icons i:not(:last-child) {
+   margin-inline-end: 1rem;
+}
+
+.icons-light {
+   color: var(--icon-color-light);
+}
+
+.icons-dark {
+   color: var(--icon-color-dark);
+}
+
 /* =====================
       commons
 ====================== */
