@@ -5,11 +5,10 @@
    /*bg-colors*/
    --primary-bg-color: #009688;
    --secondary-bg-color: #d9dbd4;
-   /* app colors */
+   /* most used colors */
    --top-bar-color: #eaeaea;
    --app-primary-color: #e5ddd5;
    --accent-color: #8edafc;
-   --received-color: #fff;
    --sent-color: #d5f9ba;
    --chat-color-dark: #e9ebeb;
    --sm-text-color: #b6b9bb;
