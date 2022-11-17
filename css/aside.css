@@ -1,3 +1,8 @@
+aside {
+   overflow-y: hidden;
+   display: flex;
+   flex-direction: column;
+}
 /* =====================
       profilo user
 ====================== */
@@ -74,4 +79,11 @@
 
 .search-btn {
    background-color: white;
+}
+
+/* =====================
+     contacts
+====================== */
+.contacts {
+   overflow-y: scroll;
 }

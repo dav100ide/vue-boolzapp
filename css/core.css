@@ -27,16 +27,17 @@ body {
 /* =====================
       macro-areas
 ====================== */
+
 body {
    height: 100vh;
    background-image: linear-gradient(var(--primary-bg-color) 15%, var(--secondary-bg-color) 15% 100%);
+   padding: 1.5625rem 0;
 }
 
 #app {
    max-width: 75rem;
    margin: 0 auto;
    height: 100%;
-   padding: 1.5625rem 0;
    display: flex;
 }
 
