@@ -13,13 +13,41 @@
    align-items: center;
 }
 
-.user-avatar {
-   width: 3.5rem;
-}
-
 /* =====================
      hero notifiche
 ====================== */
 .hero {
+   display: flex;
+   align-items: center;
+   gap: 0.6rem;
    background-color: var(--accent-color);
+}
+
+/* hero icon (la campenalla barrata) */
+.hero > .rounded-circle {
+   color: var(--accent-color);
+   background-color: white;
+   width: 3rem;
+   height: 3rem;
+   text-align: center;
+   line-height: 3rem;
+}
+
+.hero i {
+   font-size: 1.2rem;
+}
+
+/* hero text */
+.hero-text {
+   line-height: 1.1;
+}
+
+.hero-text small {
+   color: #b6b9bb;
+   text-decoration: underline;
+   font-size: 0.85rem;
+}
+
+.hero-text small:hover {
+   color: white;
 }

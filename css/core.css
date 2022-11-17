@@ -12,6 +12,7 @@
    --received-color: #fff;
    --sent-color: #d5f9ba;
    --chat-color-dark: #e9ebeb;
+   --sm-text-color: #b6b9bb;
    /* icons colors */
    --icon-color-light: #b1b1b1;
    --icon-color-dark: #6b7376;
@@ -74,3 +75,10 @@ i {
 /* =====================
       commons
 ====================== */
+.avatar-md {
+   width: 3.5rem;
+}
+
+.avatar-lg {
+   width: 4rem;
+}
