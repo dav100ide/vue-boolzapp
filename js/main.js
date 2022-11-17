@@ -4,7 +4,6 @@ createApp({
    data() {
       return {
          // data..
-         mmm: 'ciaoo',
          contacts: [
             {
                name: 'Michele',

@@ -5,3 +5,14 @@
 /* =====================
      bootstrap reset 
 ======================= */
+
+/* =====================
+     debug
+======================= */
+.debug main {
+   background-color: brown;
+}
+
+.debug aside {
+   background-color: lightpink;
+}

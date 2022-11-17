@@ -2,7 +2,15 @@
       my variables 
 ====================== */
 :root {
-   /*colors*/
+   /*bg-colors*/
+   --primary-bg-color: #009688;
+   --secondary-bg-color: #d9dbd4;
+
+   --app-primary-color: #e5ddd5;
+   --accent-color: #8edafc;
+   --chat-color: #fff;
+   --chat-color-dark: #e9ebeb;
+   --icon-color: #b1b1b1;
 }
 
 /* =====================
@@ -11,7 +19,29 @@
 body {
    font-family: 'Lato', sans-serif;
 }
+/* =====================
+      macro-areas
+====================== */
+body {
+   height: 100vh;
+   background-image: linear-gradient(var(--primary-bg-color) 15%, var(--secondary-bg-color) 15% 100%);
+}
 
+#app {
+   max-width: 75rem;
+   margin: 0 auto;
+   height: 100%;
+   padding: 1.5625rem 0;
+   display: flex;
+}
+
+aside {
+   width: 30%;
+}
+
+main {
+   flex-grow: 1;
+}
 /* =====================
       commons
 ====================== */
