@@ -1,0 +1,37 @@
+/* =====================
+      commons
+====================== */
+.avatar-md {
+   width: 3.5rem;
+}
+
+.avatar-lg {
+   width: 4rem;
+}
+
+/* =====================
+      icons
+====================== */
+i {
+   cursor: pointer;
+}
+
+.icons {
+   font-size: 1.2rem;
+}
+
+.icons i:not(:last-child) {
+   margin-inline-end: 1rem;
+}
+
+.icons-light {
+   color: var(--icon-color-light);
+}
+
+.icons-dark {
+   color: var(--icon-color-dark);
+}
+
+/* =====================
+      utilities
+====================== */
