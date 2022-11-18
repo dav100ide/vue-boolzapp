@@ -2,3 +2,18 @@ main {
    display: flex;
    flex-direction: column;
 }
+/* =====================
+     header chat
+====================== */
+.header {
+   background-color: var(--top-bar-color);
+}
+
+.header .contact {
+   align-items: center;
+   padding-inline: 1rem;
+}
+
+.header .icons {
+   margin-left: auto;
+}
