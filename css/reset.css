@@ -4,17 +4,3 @@
 input[type='text']:focus {
    outline: none;
 }
-/* =====================
-     bootstrap reset 
-======================= */
-
-/* =====================
-     debug
-======================= */
-.debug main {
-   background-color: lightskyblue;
-}
-
-.debug aside {
-   /* background-color: lightpink; */
-}
