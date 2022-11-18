@@ -1,7 +1,9 @@
 /* =====================
       reset 
 ====================== */
-
+input[type='text']:focus {
+   outline: none;
+}
 /* =====================
      bootstrap reset 
 ======================= */
@@ -14,5 +16,5 @@
 }
 
 .debug aside {
-   background-color: lightpink;
+   /* background-color: lightpink; */
 }
