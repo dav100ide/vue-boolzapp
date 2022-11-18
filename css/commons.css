@@ -33,5 +33,20 @@ i {
 }
 
 /* =====================
-      utilities
+      scrollbar
 ====================== */
+/* chrome */
+::-webkit-scrollbar {
+   width: 12px;
+   background-color: var(--bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--primary-bg-color);
+   border-radius: 0.625rem;
+}
+/* firefox */
+* {
+   scrollbar-width: 12px;
+   scrollbar-color: var(--primary-bg-color) var(--bar-color);
+}
