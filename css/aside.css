@@ -94,9 +94,13 @@ aside {
 .contact {
    display: flex;
    gap: 1rem;
-   padding-block: 10px;
+   padding-block: 8px;
    padding-left: 1rem;
    padding-right: 0.6rem;
+}
+
+.contact.active {
+   background-color: var(--chat-color-dark);
 }
 
 .contact:not(:last-child) {
