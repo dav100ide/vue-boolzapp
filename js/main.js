@@ -176,10 +176,8 @@ createApp({
       // invio nuovo messaggio
       sendMessage() {
          if (this.newMessage !== null) {
-            const currentTime = new Date();
-
             const sentMessage = {
-               date: currentTime,
+               date: new Date(),
                message: this.newMessage,
                status: 'sent',
             };
@@ -190,7 +188,14 @@ createApp({
       },
       // il cpu manda una risposta dopo 2sec
       autoReply() {
-         setInterval(() => {}, 2000);
+         setTimeout(() => {
+            const receivedMessage = {
+               date: new Date(),
+               message: 'ok sono scemo',
+               status: 'received',
+            };
+            this.contacts[this.currentContact].messages.push(receivedMessage);
+         }, 2000);
       },
 
       // converto con Moment.JS la data
