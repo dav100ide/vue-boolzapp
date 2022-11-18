@@ -11,7 +11,7 @@ aside {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: var(--top-bar-color);
+   background-color: var(--bar-color);
 }
 
 .user-info {

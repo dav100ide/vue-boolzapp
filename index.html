@@ -93,19 +93,26 @@
             </div>
             <!-- / top-->
             <!-- chat main -->
-            <div class="chat"></div>
+            <div class="chat">
+               <div v-for="message in contacts[currentContact].messages" class="message-container">
+                  <div class="message" :class="message.status">
+                     {{message.message}}
+                     <small class="message-date">88:88</small>
+                  </div>
+               </div>
+            </div>
             <!-- /chat main -->
             <!--  bottom -->
-            <div class="bottom">
+            <form class="bottom" @submit.prevent="alert('submittato')">
                <div class="emoji icons icons-dark">
                   <i class="fa-regular fa-face-smile"></i>
                </div>
-               <input type="text" />
+               <input type="text" placeholder="Scrivi un messaggio" />
                <div class="command icons icons-dark">
                   <i class="fa-solid fa-microphone"></i>
                   <i class="fa-regular fa-paper-plane"></i>
                </div>
-            </div>
+            </form>
             <!-- / bottom -->
          </main>
       </div>

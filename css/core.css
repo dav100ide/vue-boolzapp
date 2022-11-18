@@ -43,6 +43,7 @@ body {
 
 aside {
    width: 35%;
+   flex-shrink: 0;
 }
 
 main {

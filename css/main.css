@@ -23,19 +23,67 @@ main {
 .chat {
    background-image: url('../img/mine.jpg');
    flex-grow: 1;
+   padding: 1.5rem 5rem;
+   overflow-y: scroll;
 }
+
+.message-container {
+   display: flex;
+   margin-bottom: 0.5rem;
+}
+
+.message {
+   position: relative;
+   min-width: 10rem;
+   max-width: 30rem;
+   background-color: white;
+   border-radius: 0.5rem;
+   padding: 0.8rem;
+}
+
+.message-date {
+   padding: 2px 8px;
+   font-size: 0.625rem;
+   color: darkgray;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}
+
+.message.sent {
+   background-color: var(--sent-color);
+}
+
+.message-container:has(.sent) {
+   justify-content: flex-end;
+}
+
+.message-container:has(.received) {
+   justify-content: flex-start;
+}
+
 /* =====================
        bottom
 ====================== */
 .bottom {
    display: flex;
+   align-items: center;
    background-color: var(--bar-color);
+   padding-block: 0.5rem;
 }
 
 .bottom input {
    flex-grow: 1;
+   padding: 0.5rem;
+   border: none;
+   border-radius: 0.75rem;
+}
+
+.bottom input::placeholder {
+   font-size: 0.8rem;
 }
 
 .emoji,
 .command {
+   padding-inline: 2rem;
 }
