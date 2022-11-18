@@ -66,10 +66,6 @@ aside {
    background-color: #fafafa;
 }
 
-.search-bar > * {
-   border-radius: unset;
-}
-
 .search-bar input {
    flex-grow: 1;
    border: none;
@@ -77,7 +73,16 @@ aside {
    background-color: white;
 }
 
+.search-bar input:focus {
+   outline: none;
+}
+
+.search-bar input:focus::placeholder {
+   font-style: italic;
+}
+
 .search-btn {
+   border-radius: unset;
    background-color: white;
 }
 
