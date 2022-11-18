@@ -66,9 +66,10 @@
                   </div>
                   <div class="contact-text">
                      <span>{{contact.name}}</span>
-                     <small>Ultimo messaggio inviato</small>
+                     <small>{{getLast("message", index)}}</small>
                   </div>
-                  <div class="last-sent-time">12:00</div>
+                  <!-- {{getLast("date", index)}} -->
+                  <div class="last-sent-time">data</div>
                </div>
             </section>
             <!-- /lista contatti -->
@@ -98,7 +99,7 @@
                   <div class="message" :class="message.status">
                      <div class="message-content">
                         {{message.message}}
-                        <small class="message-date">{{message.date}}</small>
+                        <small class="message-date">{{formatDate(message.date)}}</small>
                      </div>
                   </div>
                </div>
@@ -118,6 +119,9 @@
             <!-- / bottom -->
          </main>
       </div>
+      <!-- moment js -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- /moment js -->
       <script src="js/main.js"></script>
    </body>
 </html>

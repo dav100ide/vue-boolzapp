@@ -175,7 +175,7 @@ createApp({
       // metodi vue
 
       sendMessage() {
-         const currentTime = 'D/MM/YYYY'; // dopo includi moment.js
+         const currentTime = new Date();
          const sentMessage = {
             date: currentTime,
             message: this.newMessage,
@@ -184,5 +184,23 @@ createApp({
          this.contacts[this.currentContact].messages.push(sentMessage);
          this.newMessage = null;
       },
+
+      formatDate(dateString) {
+         return moment(dateString, 'DD/MM/YYYY, h:mm:ss').format('HH:mm');
+      },
+
+      getLast(arrItem, index) {
+         const messageArr = this.contacts[index].messages;
+
+         if (arrItem === 'message') {
+            return messageArr[messageArr.length - 1].message;
+         } else if (arrItem === 'date') {
+            return messageArr[messageArr.length - 1].date;
+         }
+      },
+
+      // getRelativeTime(timeString) {
+      //    //....
+      // },
    },
 }).mount('#app');
