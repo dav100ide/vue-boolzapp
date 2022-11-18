@@ -55,12 +55,12 @@
                <button class="search-btn | btn btn-light">
                   <i class="fa-solid fa-magnifying-glass icons-light"></i>
                </button>
-               <input type="text" placeholder="Cerca o inizia una nuova chat" />
+               <input type="text" v-model="searched" placeholder="Cerca o inizia una nuova chat" @keyup="searchContact" />
             </section>
             <!-- /barra di ricerca contatti -->
             <!-- lista contatti -->
             <section class="contacts">
-               <div v-for="(contact, index) in contacts" class="contact" :class="{active: index === currentContact }" @click="currentContact = index">
+               <div v-for="(contact, index) in contacts" class="contact" :class="{active: index === currentContact, 'd-none': !contact.visible }" @click="currentContact = index">
                   <div class="avatar-lg">
                      <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="rounded-circle mw-100" />
                   </div>

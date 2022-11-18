@@ -6,6 +6,7 @@ createApp({
          // data..
          currentContact: 0,
          newMessage: null,
+         searched: null,
          contacts: [
             {
                name: 'Michele',
@@ -191,11 +192,11 @@ createApp({
          setTimeout(() => {
             const receivedMessage = {
                date: new Date(),
-               message: 'ok sono scemo',
+               message: 'ok sono stupido',
                status: 'received',
             };
             this.contacts[this.currentContact].messages.push(receivedMessage);
-         }, 2000);
+         }, 2500);
       },
 
       // converto con Moment.JS la data
@@ -213,6 +214,8 @@ createApp({
             return messageArr[messageArr.length - 1].date;
          }
       },
+      // ricerco tra i contatti (case insensitive)
+      searchContact() {},
    },
    created() {
       // eventuali API
