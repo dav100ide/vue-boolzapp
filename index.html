@@ -98,7 +98,7 @@
                   <div class="message" :class="message.status">
                      <div class="message-content">
                         {{message.message}}
-                        <small class="message-date">88:88</small>
+                        <small class="message-date">{{message.date}}</small>
                      </div>
                   </div>
                </div>
@@ -109,10 +109,10 @@
                <div class="emoji icons icons-dark">
                   <i class="fa-regular fa-face-smile"></i>
                </div>
-               <input type="text" placeholder="Scrivi un messaggio" />
+               <input v-model="newMessage" type="text" placeholder="Scrivi un messaggio" />
                <div class="command icons icons-dark">
                   <i class="fa-solid fa-microphone"></i>
-                  <i class="fa-regular fa-paper-plane"></i>
+                  <i class="fa-regular fa-paper-plane" @click="sendMessage"></i>
                </div>
             </form>
             <!-- / bottom -->

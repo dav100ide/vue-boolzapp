@@ -4,7 +4,8 @@ createApp({
    data() {
       return {
          // data..
-         currentContact: 5,
+         currentContact: 0,
+         newMessage: null,
          contacts: [
             {
                name: 'Michele',
@@ -172,5 +173,16 @@ createApp({
    },
    methods: {
       // metodi vue
+
+      sendMessage() {
+         const currentTime = 'D/MM/YYYY'; // dopo includi moment.js
+         const sentMessage = {
+            date: currentTime,
+            message: this.newMessage,
+            status: 'sent',
+         };
+         this.contacts[this.currentContact].messages.push(sentMessage);
+         this.newMessage = null;
+      },
    },
 }).mount('#app');
