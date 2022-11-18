@@ -74,28 +74,39 @@
             <!-- /lista contatti -->
          </aside>
          <main>
-            <!-- header chat -->
-            <div class="header">
+            <!--  top-->
+            <div class="top">
                <div class="contact">
                   <div class="avatar-md">
-                     <img src="img/avatar_1.jpg" alt="" class="rounded-circle mw-100" />
+                     <img :src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="contacts[currentContact].name" class="rounded-circle mw-100" />
                   </div>
                   <div class="contact-text">
-                     <span>Michele</span>
+                     <span>{{contacts[currentContact].name}}</span>
                      <small>Ultimo messaggio inviato</small>
                   </div>
-                  <div class="icons icons-dark">
+                  <div class="icons icons-light">
                      <i class="fa-solid fa-magnifying-glass"></i>
                      <i class="fa-solid fa-thumbtack"></i>
                      <i class="fa-solid fa-ellipsis-vertical"></i>
                   </div>
                </div>
             </div>
-            <!-- /header chat -->
-            <!-- corpo chat -->
-            <!-- /corpo chat -->
-            <!-- footer chat -->
-            <!-- /footer chat -->
+            <!-- / top-->
+            <!-- chat main -->
+            <div class="chat"></div>
+            <!-- /chat main -->
+            <!--  bottom -->
+            <div class="bottom">
+               <div class="emoji icons icons-dark">
+                  <i class="fa-regular fa-face-smile"></i>
+               </div>
+               <input type="text" />
+               <div class="command icons icons-dark">
+                  <i class="fa-solid fa-microphone"></i>
+                  <i class="fa-regular fa-paper-plane"></i>
+               </div>
+            </div>
+            <!-- / bottom -->
          </main>
       </div>
       <script src="js/main.js"></script>

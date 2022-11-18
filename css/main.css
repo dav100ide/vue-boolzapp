@@ -3,17 +3,39 @@ main {
    flex-direction: column;
 }
 /* =====================
-     header chat
+       top
 ====================== */
-.header {
-   background-color: var(--top-bar-color);
+.top {
+   background-color: var(--bar-color);
 }
 
-.header .contact {
+.top .contact {
    align-items: center;
    padding-inline: 1rem;
 }
 
-.header .icons {
+.top .icons {
    margin-left: auto;
+}
+/* =====================
+      chat main
+====================== */
+.chat {
+   background-image: url('../img/mine.jpg');
+   flex-grow: 1;
+}
+/* =====================
+       bottom
+====================== */
+.bottom {
+   display: flex;
+   background-color: var(--bar-color);
+}
+
+.bottom input {
+   flex-grow: 1;
+}
+
+.emoji,
+.command {
 }

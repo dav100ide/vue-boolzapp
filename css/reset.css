@@ -12,7 +12,7 @@ input[type='text']:focus {
      debug
 ======================= */
 .debug main {
-   background-color: brown;
+   background-color: lightskyblue;
 }
 
 .debug aside {
