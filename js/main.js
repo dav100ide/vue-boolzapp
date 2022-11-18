@@ -173,23 +173,32 @@ createApp({
    },
    methods: {
       // metodi vue
-
+      // invio nuovo messaggio
       sendMessage() {
-         const currentTime = new Date();
+         if (this.newMessage !== null) {
+            const currentTime = new Date();
 
-         const sentMessage = {
-            date: currentTime,
-            message: this.newMessage,
-            status: 'sent',
-         };
-         this.contacts[this.currentContact].messages.push(sentMessage);
-         this.newMessage = null;
+            const sentMessage = {
+               date: currentTime,
+               message: this.newMessage,
+               status: 'sent',
+            };
+            this.contacts[this.currentContact].messages.push(sentMessage);
+            this.newMessage = null;
+            this.autoReply();
+         }
+      },
+      // il cpu manda una risposta dopo 2sec
+      autoReply() {
+         setInterval(() => {}, 2000);
       },
 
+      // converto con Moment.JS la data
       formatDate(dateString) {
          return moment(dateString, 'DD/MM/YYYY, h:mm:ss').format('kk:mm');
       },
 
+      //prendo l'ultimo item di un array (content/data dell'ultimo messaggio
       getLast(arrItem, index) {
          const messageArr = this.contacts[index].messages;
 
@@ -201,6 +210,6 @@ createApp({
       },
    },
    created() {
-      moment.locale('it');
+      // eventuali API
    },
 }).mount('#app');

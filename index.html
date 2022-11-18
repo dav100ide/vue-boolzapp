@@ -106,14 +106,16 @@
             </div>
             <!-- /chat main -->
             <!--  bottom -->
-            <form class="bottom" @submit.prevent="alert('submittato')">
+            <form class="bottom" @submit.prevent="sendMessage">
                <div class="emoji icons icons-dark">
                   <i class="fa-regular fa-face-smile"></i>
                </div>
-               <input v-model="newMessage" type="text" placeholder="Scrivi un messaggio" />
+               <input v-model="newMessage" type="text" placeholder="Scrivi un messaggio" required />
                <div class="command icons icons-dark">
                   <i class="fa-solid fa-microphone"></i>
-                  <i class="fa-regular fa-paper-plane" @click="sendMessage"></i>
+                  <button type="submit">
+                     <i class="fa-regular fa-paper-plane"></i>
+                  </button>
                </div>
             </form>
             <!-- / bottom -->
