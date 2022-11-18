@@ -176,6 +176,7 @@ createApp({
 
       sendMessage() {
          const currentTime = new Date();
+
          const sentMessage = {
             date: currentTime,
             message: this.newMessage,
@@ -186,7 +187,7 @@ createApp({
       },
 
       formatDate(dateString) {
-         return moment(dateString, 'DD/MM/YYYY, h:mm:ss').format('HH:mm');
+         return moment(dateString, 'DD/MM/YYYY, h:mm:ss').format('kk:mm');
       },
 
       getLast(arrItem, index) {
@@ -198,9 +199,8 @@ createApp({
             return messageArr[messageArr.length - 1].date;
          }
       },
-
-      // getRelativeTime(timeString) {
-      //    //....
-      // },
+   },
+   created() {
+      moment.locale('it');
    },
 }).mount('#app');
