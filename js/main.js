@@ -6,7 +6,7 @@ createApp({
          // data..
          currentContact: 0,
          newMessage: null,
-         searched: null,
+         searched: '',
          contacts: [
             {
                name: 'Michele',
@@ -215,7 +215,18 @@ createApp({
          }
       },
       // ricerco tra i contatti (case insensitive)
-      searchContact() {},
+      searchContact() {
+         const searched = this.searched.toLowerCase();
+         this.contacts.forEach((contact, index) => {
+            const contactName = contact.name.toLowerCase();
+
+            if (!contactName.includes(searched)) {
+               this.contacts[index].visible = false;
+            } else if (contactName.includes(searched)) {
+               this.contacts[index].visible = true;
+            }
+         });
+      },
    },
    created() {
       // eventuali API
