@@ -227,6 +227,11 @@ createApp({
             }
          });
       },
+      deleteMessage(index) {
+         const contact = this.contacts[this.currentContact];
+         const messageArr = contact.messages;
+         messageArr.splice(index, 1);
+      },
    },
    created() {
       // eventuali API
