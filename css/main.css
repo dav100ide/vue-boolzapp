@@ -42,12 +42,12 @@ main {
 }
 
 .message-date {
-   padding: 2px 8px;
-   font-size: 0.625rem;
-   color: darkgray;
    position: absolute;
    bottom: 0;
    right: 0;
+   padding: 2px 8px;
+   font-size: 0.625rem;
+   color: darkgray;
 }
 
 .message.sent {
@@ -60,6 +60,10 @@ main {
 
 .message-container:has(.received) {
    justify-content: flex-start;
+}
+
+i.dropdown-toggle {
+   float: right;
 }
 
 /* =====================
