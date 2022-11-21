@@ -86,6 +86,9 @@ i.dropdown-toggle {
 .bottom input::placeholder {
    font-size: 0.8rem;
 }
+.bottom input:focus::placeholder {
+   font-style: italic;
+}
 
 .emoji,
 .command {

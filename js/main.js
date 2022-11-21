@@ -217,9 +217,9 @@ createApp({
       // ricerco tra i contatti (case insensitive)
       searchContact() {
          const searched = this.searched.toLowerCase();
+
          this.contacts.forEach((contact, index) => {
             const contactName = contact.name.toLowerCase();
-
             if (!contactName.includes(searched)) {
                this.contacts[index].visible = false;
             } else if (contactName.includes(searched)) {
@@ -227,6 +227,8 @@ createApp({
             }
          });
       },
+
+      // cancello il messaggio in chat
       deleteMessage(index) {
          const contact = this.contacts[this.currentContact];
          const messageArr = contact.messages;
