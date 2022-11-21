@@ -69,7 +69,7 @@
                   </div>
                   <div class="contact-text">
                      <span>{{contact.name}}</span>
-                     <small>{{getLast("message", index)}}</small>
+                     <small>{{getLast("message", index).substring(0,100)}}</small>
                   </div>
                   <div class="last-sent-time">{{formatDate(getLast("date", index))}}</div>
                </div>
@@ -89,7 +89,7 @@
                   </div>
                   <div class="contact-text">
                      <span>{{contacts[currentContact].name}}</span>
-                     <small>{{getLast('message', currentContact)}}</small>
+                     <small>{{getLast('message', currentContact).substring(0,80)}}</small>
                   </div>
                   <div class="icons icons-light">
                      <i class="fa-solid fa-magnifying-glass"></i>
