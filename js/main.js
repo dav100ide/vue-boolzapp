@@ -190,14 +190,20 @@ createApp({
       },
       // il cpu manda una risposta dopo 2sec
       autoReply() {
+         // prendo la risposta di Norris tramite un api
          setTimeout(() => {
-            const receivedMessage = {
-               date: new Date(),
-               message: 'ok sono stupido',
-               status: 'received',
-            };
-            this.contacts[this.currentContact].messages.push(receivedMessage);
-         }, 2500);
+            axios
+               .get('https://api.chucknorris.io/jokes/random') //
+               .then((response) => {
+                  const norris = response.data.value;
+                  const receivedMessage = {
+                     date: new Date(),
+                     message: norris,
+                     status: 'received',
+                  };
+                  this.contacts[this.currentContact].messages.push(receivedMessage);
+               });
+         }, 3000);
       },
 
       // converto con Moment.JS la data
