@@ -247,11 +247,19 @@ createApp({
             console.log(invisible, 'true');
          }
       },
+      /*====================================
+          interazione messaggio in chat
+      =================================================*/
       // cancello il messaggio in chat
       deleteMessage(index) {
          const contact = this.contacts[this.currentContact];
          const messageArr = contact.messages;
          messageArr.splice(index, 1);
+      },
+      // mostra info messaggio
+      showInfo(index) {
+         console.log(index);
+         alert('il click non parte??');
       },
    },
 }).mount('#app');

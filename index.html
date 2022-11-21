@@ -70,9 +70,9 @@
                   </div>
                   <div class="last-sent-time">{{formatDate(getLast("date", index))}}</div>
                </div>
-               <div v-else class="contact__alternative | m-auto">
+               <div v-else class="contact__alternative | p-4">
                   <h3 class="text-center">Opsss</h3>
-                  <p>Nessun contatto si chiama "{{searched}}"</p>
+                  <p>Nessun contatto si chiama "{{searched}}".</p>
                </div>
             </section>
             <!-- /lista contatti -->
@@ -106,7 +106,8 @@
                         <i class="icons-dark | ms-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></i>
                         <!-- lista opzioni drop down -->
                         <ul class="dropdown-menu">
-                           <li class="dropdown-item" @click="deleteMessage(index)">cancella</li>
+                           <li class="dropdown-item" @ckick="showInfo(index)">Info messaggio</li>
+                           <li class="dropdown-item" @click="deleteMessage(index)">Cancella</li>
                         </ul>
                         <!-- /lista opzioni drop down -->
 
