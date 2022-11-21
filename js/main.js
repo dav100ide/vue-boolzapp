@@ -7,6 +7,7 @@ createApp({
          currentContact: 0,
          newMessage: null,
          searched: '',
+         listVisibility: true,
          contacts: [
             {
                name: 'Michele',
@@ -217,7 +218,6 @@ createApp({
       // ricerco tra i contatti (case insensitive)
       searchContact() {
          const searched = this.searched.toLowerCase();
-
          this.contacts.forEach((contact, index) => {
             const contactName = contact.name.toLowerCase();
             if (!contactName.includes(searched)) {
@@ -226,16 +226,32 @@ createApp({
                this.contacts[index].visible = true;
             }
          });
+         // determino la visibilità della lista
+         this.verifyListVisibility();
       },
-
+      // messaggio alternativo quando nn c'è il contatto corrispondente
+      verifyListVisibility() {
+         let invisible = 0;
+         this.contacts.forEach((contact) => {
+            if (contact.visible === false) {
+               invisible++;
+            } else if (contact.visible) {
+               invisible--;
+            }
+         });
+         if (invisible === this.contacts.length) {
+            this.listVisibility = false;
+            console.log(invisible, 'false');
+         } else {
+            this.listVisibility = true;
+            console.log(invisible, 'true');
+         }
+      },
       // cancello il messaggio in chat
       deleteMessage(index) {
          const contact = this.contacts[this.currentContact];
          const messageArr = contact.messages;
          messageArr.splice(index, 1);
       },
-   },
-   created() {
-      // eventuali API
    },
 }).mount('#app');

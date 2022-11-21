@@ -60,7 +60,7 @@
             <!-- /barra di ricerca contatti -->
             <!-- lista contatti -->
             <section class="contacts">
-               <div v-for="(contact, index) in contacts" class="contact" :class="{active: index === currentContact, 'd-none': !contact.visible }" @click="currentContact = index">
+               <div v-if="listVisibility" v-for="(contact, index) in contacts" class="contact" :class="{active: index === currentContact, 'd-none': !contact.visible }" @click="currentContact = index">
                   <div class="avatar-lg">
                      <img :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" class="rounded-circle mw-100" />
                   </div>
@@ -68,14 +68,17 @@
                      <span>{{contact.name}}</span>
                      <small>{{getLast("message", index)}}</small>
                   </div>
-                  <!-- {{getLast("date", index)}} -->
                   <div class="last-sent-time">{{formatDate(getLast("date", index))}}</div>
+               </div>
+               <div v-else class="contact__alternative | m-auto">
+                  <h3 class="text-center">Opsss</h3>
+                  <p>Nessun contatto si chiama "{{searched}}"</p>
                </div>
             </section>
             <!-- /lista contatti -->
          </aside>
          <main>
-            <!--  top-->
+            <!-- top -->
             <div class="top">
                <div class="contact">
                   <div class="avatar-md">

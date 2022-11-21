@@ -88,7 +88,7 @@ aside {
 ====================== */
 .contacts {
    flex-grow: 1;
-   overflow-y: scroll;
+   overflow-y: auto;
 }
 
 .contact {
@@ -106,6 +106,15 @@ aside {
 .contact:not(:last-child) {
    border-bottom: 1px solid var(--chat-color-dark);
 }
+/* messaggio alternativo quando
+   non c'è nessun contatto corrispondente */
+.contact__alternative {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--chat-color-dark);
+}
+
 /* nome contatto, l'ultimo messaggio inviato e qnd fu inviato */
 .contact-text {
    display: flex;
