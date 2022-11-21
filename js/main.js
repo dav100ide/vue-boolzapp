@@ -256,10 +256,5 @@ createApp({
          const messageArr = contact.messages;
          messageArr.splice(index, 1);
       },
-      // mostra info messaggio
-      showInfo(index) {
-         console.log(index);
-         alert('il click non parte??');
-      },
    },
 }).mount('#app');
