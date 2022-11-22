@@ -215,10 +215,17 @@ createApp({
       getLast(arrItem, index) {
          const messageArr = this.contacts[index].messages;
 
+         // messaggio
          if (arrItem === 'message') {
-            return messageArr[messageArr.length - 1].message;
-         } else if (arrItem === 'date') {
-            return messageArr[messageArr.length - 1].date;
+            if (messageArr.length == 0) {
+               return 'No messages';
+            } else return messageArr[messageArr.length - 1].message;
+         }
+         // data
+         else if (arrItem === 'date') {
+            if (messageArr.length == 0) {
+               return '';
+            } else return messageArr[messageArr.length - 1].date;
          }
       },
       // ricerco tra i contatti (case insensitive)
@@ -260,6 +267,7 @@ createApp({
       deleteMessage(index) {
          const contact = this.contacts[this.currentContact];
          const messageArr = contact.messages;
+
          messageArr.splice(index, 1);
       },
    },
